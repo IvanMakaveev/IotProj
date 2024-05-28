@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            font-size: 1.5em;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .left-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .right-section {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+        }
+
+        .block {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .block h2 {
+            margin-top: 0;
+        }
+
+        .block input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .block button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #temp-input {
+            margin:4%;
+        }
+
+        .block button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+   Smart pot holder
+</header>
+
+<div class="container">
+    <div class="left-section">
+        <div class="block">
+            <h2>Set Desired Temperature</h2>
+            <input id="temp-input" type="number" placeholder="Enter desired temperature">
+            <button>Submit</button>
+        </div>
+    </div>
+    <div class="right-section">
+        <!-- Diagram will be dynamically created here -->
+        <div id="diagram">Diagram Area</div>
+    </div>
+</div>
+
+</body>
+</html>
