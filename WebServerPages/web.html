@@ -8,7 +8,13 @@
      <script src="script.js"></script>
 </head>
 <body>
-
+<script>
+    function changeTemp(id)
+    {
+        let val = Number(document.getElementById("temp-input").value);
+        fetch("/setTemp/"+val).then((response) => console.log(response));
+    }
+</script>
 <header>
    Smart pot holder
 </header>
@@ -17,12 +23,16 @@
     <div class="left-section">
         <div class="block">
             <h2>Set Desired Temperature</h2>
-            <input id="temp-input" type="number" placeholder="Enter desired temperature">
-            <button>Submit</button>
+            <input id="temp-input" type="number" placeholder="Enter desired temperature" value="15">
+            <button id="btn" onclick="changeTemp(this)">Submit</button>
         </div>
     </div>
     <div class="right-section">
+<<<<<<< HEAD
         <canvas id="myCanvas"></canvas>
+=======
+        <div id="diagram">Diagram Area</div>
+>>>>>>> a90d3b8a8c778480a6dcbd0002f297b3c6eb90a1
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
